@@ -17,7 +17,7 @@ export class TicketsTableComponent {
   pageNumber: number = 1;
   pageSize: number = 3;
   Tickets: Ticket[] = [];
-
+  
   constructor(private ticketsService:TicketsService, private router:Router){}
   ngOnInit(): void {
   this.LoadTickets();
@@ -26,6 +26,7 @@ export class TicketsTableComponent {
   this.ticketsService.getTicketsLimited(this.pageNumber, this.pageSize).subscribe(response =>{
     this.Tickets = response as Ticket[];
     this.filteredTickets = this.Tickets;
+    
    console.log(JSON.stringify(this.Tickets));
   },
   error => {

@@ -61,4 +61,8 @@ export class UpdateTicketComponent {
       
     } 
   }
+  goBack()
+  {
+    this.router.navigate(['/tickets']);
+  }
 }

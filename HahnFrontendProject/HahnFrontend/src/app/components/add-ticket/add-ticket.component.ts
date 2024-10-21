@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { Ticket } from 'src/models/ticket';
 import { TicketsService } from 'src/services/tickets.service';
-import Swal from 'sweetalert2'
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-add-ticket',
   templateUrl: './add-ticket.component.html',
   styleUrls: ['./add-ticket.component.css']
 })
 export class AddTicketComponent {
-  constructor(private ticketService:TicketsService){}
+  constructor(private ticketService:TicketsService, private router:Router){}
   Description: string = '';
   selectStatusValue: string = '';
   DescriptionError = '';
@@ -40,5 +41,9 @@ ticket = new Ticket()
       this.Description = '';
       this.selectStatusValue = '';
     } 
+  }
+  goBack()
+  {
+    this.router.navigate(['/tickets']);
   }
 }

@@ -23,12 +23,12 @@
         </tr>
       </tbody>
     </table>
-   <!-- Pagination Controls -->
+   
    <div>
     <button class="btn btn-secondary" (click)="goToPreviousPage()" [disabled]="pageNumber <= 1"><</button>
-    <button class="btn btn-secondary" (click)="goToNextPage()">></button>
+    <button class="btn btn-secondary" (click)="goToNextPage()" [disabled]="Tickets == null">></button>
   </div>
-    <!-- Add New Button -->
+    
     <button class="btn btn-success mt-4" (click)="GoToAddNew()">Add New</button>
   </div>
   
