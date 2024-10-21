@@ -23,13 +23,13 @@
         </tr>
       </tbody>
     </table>
-   
+   <h6 class="text-danger" *ngIf="Tickets == null || Tickets.length ==0">No data to display</h6>
    <div>
     <button class="btn btn-secondary" (click)="goToPreviousPage()" [disabled]="pageNumber <= 1"><</button>
     <button class="btn btn-secondary" (click)="goToNextPage()" [disabled]="Tickets == null">></button>
   </div>
     
-    <button class="btn btn-success mt-4" (click)="GoToAddNew()">Add New</button>
+    <button class="btn btn-success mt-3" (click)="GoToAddNew()">Add New</button>
   </div>
   
   
