@@ -24,8 +24,8 @@ namespace HahnTestProject
         {
             // in memory database
             var options = new DbContextOptionsBuilder<AppDbContext>()
-                .UseInMemoryDatabase(databaseName: "TestDatabase")
-                .Options;
+             .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())  // Generate new DB for each test
+             .Options;
 
             _context = new AppDbContext(options);
             _controller = new TicketsController(_context);
