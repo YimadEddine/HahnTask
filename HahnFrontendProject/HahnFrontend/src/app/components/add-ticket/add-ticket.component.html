@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <div class="header-green text-center p-3 mb-4">
+      <h2>Add ticket form</h2>
+    </div>
+    <form (ngSubmit)="onSubmit()" class="border rounded p-4 shadow-sm">
+      <div class="form-group">
+        <label for="textBox">Text Box:</label>
+        <input
+          type="text"
+          id="textBox"
+          [(ngModel)]="Description"
+          name="textBox"
+          class="form-control"
+          required
+        />
+        <span class="text-danger">{{DescriptionError}}</span>
+      </div>
+      <div class="form-group">
+        <label for="selectBox">Select Box:</label>
+        <select
+          id="selectBox"
+          [(ngModel)]="selectStatusValue"
+          name="selectBox"
+          class="form-control"
+          required
+        >
+          <option value="">-- Select an Option --</option>
+          <option value="Open">Open</option>
+          <option value="Closed">Close</option>
+        </select>
+        <span class="text-danger">{{StatusError}}</span>
+      </div>
+      <button type="submit" class="btn btn-success btn-block">Submit</button>
+    </form>
+  </div>
+  

@@ -1,0 +1,37 @@
+<div class="container mt-4">
+  <h6>(You can click on table headers to sort)</h6>
+    <table class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th  (click)="toggleSort('id')" class="header-green">Ticket Id</th>
+          <th  (click)="toggleSort('description')" class="header-green">Description</th>
+          <th   (click)="toggleSort('status')" class="header-green">Status</th>
+          <th  (click)="toggleSort('date')"class="header-green">Date</th>
+          <th class="header-green">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let ticket of filteredTickets">
+          <td>{{ ticket.id }}</td>
+          <td>{{ ticket.description }}</td>
+          <td>{{ ticket.status }}</td>
+          <td>{{ ticket.date | date: 'MMM-dd-yyyy' }}</td>
+          <td>
+            <a href="" (click)="updateTicket(ticket.id!);$event.preventDefault()" class="text-primary" >Update</a> |
+            <a href="#" (click)="deleteTicket(ticket.id!)" class="text-danger">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+   <!-- Pagination Controls -->
+   <div>
+    <button class="btn btn-secondary" (click)="goToPreviousPage()" [disabled]="pageNumber <= 1"><</button>
+    <button class="btn btn-secondary" (click)="goToNextPage()">></button>
+  </div>
+    <!-- Add New Button -->
+    <button class="btn btn-success mt-4" (click)="GoToAddNew()">Add New</button>
+  </div>
+  
+  
+  
+  

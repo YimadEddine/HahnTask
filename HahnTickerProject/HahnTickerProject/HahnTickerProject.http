@@ -1,0 +1,6 @@
+@HahnTickerProject_HostAddress = http://localhost:5192
+
+GET {{HahnTickerProject_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

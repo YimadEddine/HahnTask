@@ -1,0 +1,67 @@
+# .NET
+## Build Folders
+**/bin/
+**/obj/
+## User-specific files
+*.suo
+*.user
+*.userprefs
+*.sln.docstates
+
+## Visual Studio
+.vs/
+
+## Rider
+.idea/
+*.sln.iml
+
+## Logs
+*.log
+
+# Environment variables
+.env
+
+# Azure Web Apps
+*.Publish.xml
+publish/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+*.nuspec
+**/packages/*
+
+# Visual Studio Code
+.vscode/
+
+# Angular
+# Node modules
+node_modules/
+
+# Built files
+dist/
+out-tsc/
+build/
+
+# Compiled output
+*.js
+*.js.map
+*.d.ts
+
+# Angular cache
+*.ngsummary.json
+*.ngfactory.ts
+*.ngstyle.ts
+
+# Environment files
+src/environments/*.ts
+
+# IDE files
+/.idea/
+/*.sublime-project
+/*.sublime-workspace
+/.vscode/
+
+# System files
+.DS_Store
+Thumbs.db
